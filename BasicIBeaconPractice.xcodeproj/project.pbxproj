@@ -15,6 +15,7 @@
 		16605826283E073C0074C6A3 /* BasicIBeaconPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605825283E073C0074C6A3 /* BasicIBeaconPracticeTests.swift */; };
 		16605830283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660582F283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift */; };
 		16605832283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */; };
+		1660583F283E0C220074C6A3 /* IBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660583E283E0C220074C6A3 /* IBeaconManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1660582B283E073C0074C6A3 /* BasicIBeaconPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicIBeaconPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1660582F283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIBeaconPracticeUITests.swift; sourceTree = "<group>"; };
 		16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIBeaconPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1660583E283E0C220074C6A3 /* IBeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				1660580E283E07380074C6A3 /* AppDelegate.swift */,
 				16605810283E07380074C6A3 /* SceneDelegate.swift */,
+				1660583E283E0C220074C6A3 /* IBeaconManager.swift */,
 				16605812283E07380074C6A3 /* ViewController.swift */,
 				16605817283E073C0074C6A3 /* Assets.xcassets */,
 				16605819283E073C0074C6A3 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 				16605813283E07380074C6A3 /* ViewController.swift in Sources */,
 				1660580F283E07380074C6A3 /* AppDelegate.swift in Sources */,
 				16605811283E07380074C6A3 /* SceneDelegate.swift in Sources */,
+				1660583F283E0C220074C6A3 /* IBeaconManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
