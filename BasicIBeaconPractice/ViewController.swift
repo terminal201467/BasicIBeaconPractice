@@ -9,6 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: -Properties
+    
+    let beaconDataView = View()
+    
+    //MARK: -LifeCycle
+    override func loadView() {
+        super.loadView()
+        view = beaconDataView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
