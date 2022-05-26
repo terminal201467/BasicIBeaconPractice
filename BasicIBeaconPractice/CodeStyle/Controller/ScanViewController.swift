@@ -27,12 +27,16 @@ class ScanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBLE() 
+        setBLE()
         setButton()
         
     }
     
     //MARK: -Methods
+    private func setBLE(){
+        BLEManager.shared
+    }
+    
     private func setButton(){
         scanView.button.addTarget(self, action: #selector(scan), for: .touchDown)
     }
@@ -50,11 +54,6 @@ class ScanViewController: UIViewController {
             navigationController?.pushViewController(resultController, animated: true)
             scanSituation.toggle()
         }
-    }
-    
-    //MARK: -Methods
-    private func setBLE(){
-        BLEManager.shared
     }
 }
 

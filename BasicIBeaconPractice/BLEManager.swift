@@ -66,6 +66,15 @@ class BLEManager:NSObject{
         self.connectPeripheral = peripheral
         bleCentralManager.connect(self.connectPeripheral!, options: nil)
     }
+    
+    //MARK: - TableView Method
+    func numberOfRowInSection(_ section:Int)->Int{
+        return peripherals.count
+    }
+    
+    func getBLEData(_ indexPath:IndexPath)->String{
+        return peripherals[indexPath.row].name!
+    }
 }
 
 

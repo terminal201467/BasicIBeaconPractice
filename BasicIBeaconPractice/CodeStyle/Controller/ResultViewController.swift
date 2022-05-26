@@ -40,7 +40,6 @@ class ResultViewController: UIViewController {
     func setBLE(){
         BLEManager.shared.valueChanged = {
             DispatchQueue.main.async {
-                print("Changed")
                 self.resultView.table.reloadData()
             }
         }
@@ -49,7 +48,6 @@ class ResultViewController: UIViewController {
 
 extension ResultViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("數量:",BLEManager.shared.peripherals.count)
         return BLEManager.shared.peripherals.count
     }
     
