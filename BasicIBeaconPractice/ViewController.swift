@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     let beaconDataView = View()
     
+    let ble = BLEManager.init()
+    
     //MARK: -LifeCycle
     override func loadView() {
         super.loadView()
@@ -22,6 +24,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+    }
+    
+    //MARK: -Methods
+    func setBLE(){
+        ble.valueChanged = {
+            print("Changed")
+            
+            
+        }
     }
 }
 
