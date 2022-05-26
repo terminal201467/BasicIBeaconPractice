@@ -14,13 +14,19 @@ class BLEManager:NSObject{
     //MARK: - BindingClosure
     var valueChanged:(()->Void)?
     
+    //MARK: - Singleton
+    
+    static let shared = BLEManager()
+    
     //MARK: - Properties
+    
     private var bleCentralManager:CBCentralManager!
     
     var peripherals:[CBPeripheral] = []{
         didSet{
             valueChanged?()
             peripherals.removeDuplicates()
+            print("Changed")
         }
     }
      
@@ -32,7 +38,6 @@ class BLEManager:NSObject{
     override init() {
         super.init()
         setCentralManager()
-        
     }
     
     //MARK: - Methods
@@ -41,8 +46,6 @@ class BLEManager:NSObject{
     }
     
     func startScan(){
-        peripherals.removeAll()
-        RSSIs.removeAll()
         print("Start Scanning")
         bleCentralManager.scanForPeripherals(withServices: nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey:true])
     }
@@ -50,6 +53,11 @@ class BLEManager:NSObject{
     func stopScan(){
         bleCentralManager.stopScan()
         print("Stop Scaning")
+    }
+    
+    func removeAll(){
+        peripherals.removeAll()
+        RSSIs.removeAll()
     }
     
     func connect(peripheral:CBPeripheral){

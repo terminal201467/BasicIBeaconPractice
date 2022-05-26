@@ -15,9 +15,7 @@ class ScanViewController: UIViewController {
     
     //MARK: -ControllerProperties
     
-    let bleManager = BLEManager.init()
-    
-    private var scanSituation:Bool = false
+    private var scanSituation:Bool = true
     
     private let resultController = ResultViewController()
     
@@ -29,6 +27,7 @@ class ScanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBLE() 
         setButton()
         
     }
@@ -39,24 +38,23 @@ class ScanViewController: UIViewController {
     }
     
     @objc func scan(){
-        scanSituation.toggle()
         if scanSituation == true{
             scanView.activityIndicator.startAnimating()
             scanView.button.setTitle("停止掃描", for: .normal)
-            bleManager.startScan()
+            BLEManager.shared.startScan()
+            scanSituation.toggle()
         }else{
             scanView.activityIndicator.stopAnimating()
             scanView.button.setTitle("掃描", for: .normal)
-            bleManager.stopScan()
+            BLEManager.shared.stopScan()
             navigationController?.pushViewController(resultController, animated: true)
+            scanSituation.toggle()
         }
     }
     
     //MARK: -Methods
-    func setBLE(){
-        bleManager.valueChanged = {
-            print("Changed")
-        }
+    private func setBLE(){
+        BLEManager.shared
     }
 }
 

@@ -34,11 +34,22 @@ class ScanView: UIView {
         return button
     }()
     
+    let iBeaconListButton:UIButton = {
+        let button = UIButton()
+        button.setTitle("已儲存的Beacon", for: .normal)
+        button.layer.backgroundColor = CGColor.init(red: 0, green: 0, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 15
+        return button
+    }()
+    
+    
+    
     //MARK: -Intialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(button)
         addSubview(activityIndicator)
+        addSubview(iBeaconListButton)
         autoLayout()
     }
     
@@ -57,6 +68,13 @@ class ScanView: UIView {
         activityIndicator.snp.makeConstraints { make in
             make.top.equalTo(button.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
+        }
+        
+        iBeaconListButton.snp.makeConstraints { make in
+            make.width.equalTo(180)
+            make.height.equalTo(button.snp.height)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(button.snp.centerY).offset(100)
         }
     }
     

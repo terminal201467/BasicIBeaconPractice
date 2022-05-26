@@ -18,12 +18,12 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxJ-p2-718">
-                    <rect key="frame" x="167" y="453" width="80" height="40"/>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxJ-p2-718">
+                    <rect key="frame" x="167" y="428" width="80" height="40"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="0RJ-1Q-f8q"/>
@@ -37,9 +37,17 @@
                         </backgroundConfiguration>
                         <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" systemColor="systemIndigoColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-4C-Mqd">
-                    <rect key="frame" x="78" y="503" width="258" height="20"/>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-4C-Mqd">
+                    <rect key="frame" x="197" y="488" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -47,9 +55,9 @@
             <constraints>
                 <constraint firstItem="sEz-4C-Mqd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0DV-1o-UOD"/>
                 <constraint firstItem="YxJ-p2-718" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AgY-7h-0eU"/>
-                <constraint firstItem="YxJ-p2-718" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="KFU-XK-T7l"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sEz-4C-Mqd" secondAttribute="trailing" constant="78" id="YLa-oy-d7m"/>
-                <constraint firstItem="sEz-4C-Mqd" firstAttribute="top" secondItem="YxJ-p2-718" secondAttribute="bottom" constant="10" id="kKi-YI-gpS"/>
+                <constraint firstItem="YxJ-p2-718" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yaf-sZ-2Tj"/>
+                <constraint firstItem="YxJ-p2-718" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aTh-dW-cGm"/>
+                <constraint firstItem="sEz-4C-Mqd" firstAttribute="centerY" secondItem="YxJ-p2-718" secondAttribute="centerY" constant="50" id="bEf-5W-boj"/>
             </constraints>
             <point key="canvasLocation" x="139" y="121"/>
         </view>
@@ -63,6 +71,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
