@@ -19,6 +19,8 @@ class ScanViewController: UIViewController {
     
     private var scanSituation:Bool = false
     
+    private let resultController = ResultViewController()
+    
     //MARK: -LifeCycle
     override func loadView() {
         super.loadView()
@@ -37,7 +39,6 @@ class ScanViewController: UIViewController {
     }
     
     @objc func scan(){
-       
         scanSituation.toggle()
         if scanSituation == true{
             scanView.activityIndicator.startAnimating()
@@ -47,10 +48,8 @@ class ScanViewController: UIViewController {
             scanView.activityIndicator.stopAnimating()
             scanView.button.setTitle("掃描", for: .normal)
             bleManager.stopScan()
-            
+            navigationController?.pushViewController(resultController, animated: true)
         }
-        
-        //Button Font Change
     }
     
     //MARK: -Methods
