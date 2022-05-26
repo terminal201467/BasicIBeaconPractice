@@ -8,22 +8,40 @@
 import UIKit
 
 class NibViewController: UIViewController {
-
+    //MARK: -UIProperties
+    
+    @IBOutlet var scanButton:UIButton!
+    
+    @IBOutlet var activityIndicator:UIActivityIndicatorView!
+    
+    //MARK: -ControllerProperties
+    
+    private var scanSituation:Bool = false
+    
+    private let bleManager = BLEManager()
+    
+    //MARK: -LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setButton()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: -Methods
+    
+    private func setButton(){
+        scanButton.addTarget(self, action: #selector(scan), for: .touchDown)
     }
-    */
-
+    
+    @objc func scan(){
+        scanSituation.toggle()
+        if scanSituation == true{
+            activityIndicator.startAnimating()
+            scanButton.setTitle("停止掃描", for: .normal)
+            bleManager.startScan()
+        }else{
+            activityIndicator.stopAnimating()
+            scanButton.setTitle("掃描", for: .normal)
+            bleManager.stopScan()
+        }
+    }
 }

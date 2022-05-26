@@ -16,7 +16,7 @@ class IBeaconManager:NSObject{
     let locationManager = CLLocationManager()
     
     //the app monitored region
-    let region = CLBeaconRegion(uuid: <#T##UUID#>, major: CLBeaconMajorValue , minor: <#T##CLBeaconMinorValue#>, identifier: "CGM Beacon")
+//    let region = CLBeaconRegion(uuid: <#T##UUID#>, major: CLBeaconMajorValue , minor: <#T##CLBeaconMinorValue#>, identifier: "CGM Beacon")
     
     //the beacon constraint
     let beaconConstraint = CLBeaconIdentityConstraint(uuid: UUID(uuidString: "")!)
@@ -34,7 +34,7 @@ class IBeaconManager:NSObject{
     }
     
     func startMonitoring(){
-        locationManager.startMonitoring(for: region)
+//        locationManager.startMonitoring(for: region)
     }
 }
 

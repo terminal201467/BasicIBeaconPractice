@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		1660580F283E07380074C6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660580E283E07380074C6A3 /* AppDelegate.swift */; };
 		16605811283E07380074C6A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605810283E07380074C6A3 /* SceneDelegate.swift */; };
-		16605813283E07380074C6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605812283E07380074C6A3 /* ViewController.swift */; };
+		16605813283E07380074C6A3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605812283E07380074C6A3 /* ScanViewController.swift */; };
 		16605818283E073C0074C6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16605817283E073C0074C6A3 /* Assets.xcassets */; };
 		1660581B283E073C0074C6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16605819283E073C0074C6A3 /* LaunchScreen.storyboard */; };
 		16605826283E073C0074C6A3 /* BasicIBeaconPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605825283E073C0074C6A3 /* BasicIBeaconPracticeTests.swift */; };
 		16605830283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660582F283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift */; };
 		16605832283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */; };
 		1660583F283E0C220074C6A3 /* IBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660583E283E0C220074C6A3 /* IBeaconManager.swift */; };
-		16605841283E0C8A0074C6A3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605840283E0C8A0074C6A3 /* View.swift */; };
+		16605841283E0C8A0074C6A3 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605840283E0C8A0074C6A3 /* ScanView.swift */; };
 		16605846283E0CC30074C6A3 /* NibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605844283E0CC30074C6A3 /* NibViewController.swift */; };
 		16605847283E0CC30074C6A3 /* NibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16605845283E0CC30074C6A3 /* NibViewController.xib */; };
 		1660584B283F1D410074C6A3 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660584A283F1D400074C6A3 /* BLEManager.swift */; };
+		1660584E283F46150074C6A3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1660584D283F46150074C6A3 /* SnapKit */; };
+		16605850283F4FF40074C6A3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660584F283F4FF40074C6A3 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		1660580B283E07380074C6A3 /* BasicIBeaconPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicIBeaconPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1660580E283E07380074C6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16605810283E07380074C6A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16605812283E07380074C6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16605812283E07380074C6A3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		16605817283E073C0074C6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1660581A283E073C0074C6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1660581C283E073C0074C6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,10 +55,11 @@
 		1660582F283E073C0074C6A3 /* BasicIBeaconPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIBeaconPracticeUITests.swift; sourceTree = "<group>"; };
 		16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIBeaconPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1660583E283E0C220074C6A3 /* IBeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconManager.swift; sourceTree = "<group>"; };
-		16605840283E0C8A0074C6A3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		16605840283E0C8A0074C6A3 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		16605844283E0CC30074C6A3 /* NibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewController.swift; sourceTree = "<group>"; };
 		16605845283E0CC30074C6A3 /* NibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibViewController.xib; sourceTree = "<group>"; };
 		1660584A283F1D400074C6A3 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		1660584F283F4FF40074C6A3 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1660584E283F46150074C6A3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				1660580E283E07380074C6A3 /* AppDelegate.swift */,
+				1660584F283F4FF40074C6A3 /* Extension.swift */,
 				16605810283E07380074C6A3 /* SceneDelegate.swift */,
 				1660584A283F1D400074C6A3 /* BLEManager.swift */,
 				1660583E283E0C220074C6A3 /* IBeaconManager.swift */,
 				16605842283E0C930074C6A3 /* CodeStyle */,
-				16605812283E07380074C6A3 /* ViewController.swift */,
-				16605840283E0C8A0074C6A3 /* View.swift */,
+				16605812283E07380074C6A3 /* ScanViewController.swift */,
+				16605840283E0C8A0074C6A3 /* ScanView.swift */,
 				16605843283E0CA30074C6A3 /* NibStyle */,
 				16605817283E073C0074C6A3 /* Assets.xcassets */,
 				16605819283E073C0074C6A3 /* LaunchScreen.storyboard */,
@@ -171,6 +176,9 @@
 			dependencies = (
 			);
 			name = BasicIBeaconPractice;
+			packageProductDependencies = (
+				1660584D283F46150074C6A3 /* SnapKit */,
+			);
 			productName = BasicIBeaconPractice;
 			productReference = 1660580B283E07380074C6A3 /* BasicIBeaconPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 16605802283E07380074C6A3;
+			packageReferences = (
+				1660584C283F46150074C6A3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1660580C283E07380074C6A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,12 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				16605846283E0CC30074C6A3 /* NibViewController.swift in Sources */,
-				16605813283E07380074C6A3 /* ViewController.swift in Sources */,
+				16605813283E07380074C6A3 /* ScanViewController.swift in Sources */,
 				1660584B283F1D410074C6A3 /* BLEManager.swift in Sources */,
 				1660580F283E07380074C6A3 /* AppDelegate.swift in Sources */,
-				16605841283E0C8A0074C6A3 /* View.swift in Sources */,
+				16605841283E0C8A0074C6A3 /* ScanView.swift in Sources */,
 				16605811283E07380074C6A3 /* SceneDelegate.swift in Sources */,
 				1660583F283E0C220074C6A3 /* IBeaconManager.swift in Sources */,
+				16605850283F4FF40074C6A3 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -444,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -464,6 +476,7 @@
 				DEVELOPMENT_TEAM = Z2D7WPWW6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BasicIBeaconPractice/Info.plist;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -491,6 +504,7 @@
 				DEVELOPMENT_TEAM = Z2D7WPWW6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BasicIBeaconPractice/Info.plist;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -624,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1660584C283F46150074C6A3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1660584D283F46150074C6A3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1660584C283F46150074C6A3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16605803283E07380074C6A3 /* Project object */;
 }

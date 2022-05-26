@@ -17,9 +17,10 @@ class BLEManager:NSObject{
     //MARK: - Properties
     private var bleCentralManager:CBCentralManager!
     
-    var peripheralNames:[String] = []{
+    var peripherals:[CBPeripheral] = []{
         didSet{
             valueChanged?()
+            peripherals.removeDuplicates()
         }
     }
      
@@ -40,7 +41,7 @@ class BLEManager:NSObject{
     }
     
     func startScan(){
-        peripheralNames.removeAll()
+        peripherals.removeAll()
         RSSIs.removeAll()
         print("Start Scanning")
         bleCentralManager.scanForPeripherals(withServices: nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey:true])
@@ -74,8 +75,10 @@ extension BLEManager:CBCentralManagerDelegate{
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print("CentralManagerDiscovered")
-        peripheralNames.append(peripheral.name!)
+        if peripheral.name != nil{
+            peripherals.append(peripheral)
+            print("Peripherals：",peripherals.map{$0.name!})
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -85,7 +88,7 @@ extension BLEManager:CBCentralManagerDelegate{
         peripheral.discoverServices(nil)
         print("CentralManagerConnect")
         self.connect(peripheral: peripheral)
-        peripheralNames.removeAll()
+        peripherals.removeAll()
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {

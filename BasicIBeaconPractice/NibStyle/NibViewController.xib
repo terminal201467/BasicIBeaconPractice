@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NibViewController" customModule="BasicIBeaconPractice" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="sEz-4C-Mqd" id="w3T-FZ-zYH"/>
+                <outlet property="scanButton" destination="YxJ-p2-718" id="Vcs-EB-XZv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +21,46 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxJ-p2-718">
+                    <rect key="frame" x="167" y="453" width="80" height="40"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="0RJ-1Q-f8q"/>
+                        <constraint firstAttribute="height" constant="40" id="ZX6-Sy-HMF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="掃描">
+                        <backgroundConfiguration key="background" cornerRadius="10">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <color key="strokeColor" name="AccentColor"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-4C-Mqd">
+                    <rect key="frame" x="78" y="503" width="258" height="20"/>
+                </activityIndicatorView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sEz-4C-Mqd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0DV-1o-UOD"/>
+                <constraint firstItem="YxJ-p2-718" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AgY-7h-0eU"/>
+                <constraint firstItem="YxJ-p2-718" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="KFU-XK-T7l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sEz-4C-Mqd" secondAttribute="trailing" constant="78" id="YLa-oy-d7m"/>
+                <constraint firstItem="sEz-4C-Mqd" firstAttribute="top" secondItem="YxJ-p2-718" secondAttribute="bottom" constant="10" id="kKi-YI-gpS"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="121"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
