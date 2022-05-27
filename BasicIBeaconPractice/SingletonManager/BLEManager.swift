@@ -26,13 +26,21 @@ class BLEManager:NSObject{
         didSet{
             valueChanged?()
             peripherals.removeDuplicates()
-            print("Changed")
+//            print("Changed")
         }
     }
      
     var connectPeripheral:CBPeripheral?
     
     var RSSIs:[NSNumber] = []
+    
+    var discoveredServices:[CBService] = []{
+        didSet{
+            discoveredServices.removeDuplicates()
+        }
+    }
+    
+    var discoveredCharacters:[CBCharacteristic] = []
 
     //MARK: - Intializer
     override init() {
@@ -125,9 +133,10 @@ extension BLEManager:CBPeripheralDelegate{
         }
         
         guard let services = peripheral.services else { return }
-        print("Discovered service:\(services)")
         services.map{ service in
+            discoveredServices.append(service)
             peripheral.discoverCharacteristics(nil, for: service)
+            print("發現的服務：",discoveredServices)
         }
     }
     
@@ -147,6 +156,8 @@ extension BLEManager:CBPeripheralDelegate{
             Value:"\(characteristic.value)
             """
             )
+            discoveredCharacters.append(characteristic)
+            print("發現的特徵：",discoveredCharacters)
         }
     }
     

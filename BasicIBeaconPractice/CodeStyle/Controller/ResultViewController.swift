@@ -13,6 +13,10 @@ class ResultViewController: UIViewController {
     
     let resultView = ResultView()
     
+    //MARK: -Controller
+    
+    let detailViewController = DetailViewController()
+    
     //MARK: -LifeCycle
     
     override func loadView() {
@@ -55,5 +59,10 @@ extension ResultViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = BLEManager.shared.peripherals.map{$0.name!}[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(detailViewController, animated: true)
+        BLEManager.shared.connect(peripheral: BLEManager.shared.peripherals[indexPath.row])
     }
 }
