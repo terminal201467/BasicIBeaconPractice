@@ -17,8 +17,8 @@
 		16605832283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */; };
 		1660583F283E0C220074C6A3 /* IBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660583E283E0C220074C6A3 /* IBeaconManager.swift */; };
 		16605841283E0C8A0074C6A3 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605840283E0C8A0074C6A3 /* ScanView.swift */; };
-		16605846283E0CC30074C6A3 /* NibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605844283E0CC30074C6A3 /* NibViewController.swift */; };
-		16605847283E0CC30074C6A3 /* NibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16605845283E0CC30074C6A3 /* NibViewController.xib */; };
+		16605846283E0CC30074C6A3 /* NibScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605844283E0CC30074C6A3 /* NibScanViewController.swift */; };
+		16605847283E0CC30074C6A3 /* NibScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16605845283E0CC30074C6A3 /* NibScanViewController.xib */; };
 		1660584B283F1D410074C6A3 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660584A283F1D400074C6A3 /* BLEManager.swift */; };
 		1660584E283F46150074C6A3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1660584D283F46150074C6A3 /* SnapKit */; };
 		16605850283F4FF40074C6A3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660584F283F4FF40074C6A3 /* Extension.swift */; };
@@ -26,6 +26,10 @@
 		16605856283F5E230074C6A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605855283F5E230074C6A3 /* ResultViewController.swift */; };
 		16605858284063990074C6A3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605857284063990074C6A3 /* DetailView.swift */; };
 		1660585A284063B00074C6A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605859284063B00074C6A3 /* DetailViewController.swift */; };
+		1660585E28407A520074C6A3 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660585D28407A520074C6A3 /* ServiceView.swift */; };
+		1660586028407A770074C6A3 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660585F28407A770074C6A3 /* ServiceViewController.swift */; };
+		16605863284096190074C6A3 /* NibResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16605861284096190074C6A3 /* NibResultViewController.swift */; };
+		16605864284096190074C6A3 /* NibResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16605862284096190074C6A3 /* NibResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +64,18 @@
 		16605831283E073C0074C6A3 /* BasicIBeaconPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIBeaconPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1660583E283E0C220074C6A3 /* IBeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconManager.swift; sourceTree = "<group>"; };
 		16605840283E0C8A0074C6A3 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
-		16605844283E0CC30074C6A3 /* NibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewController.swift; sourceTree = "<group>"; };
-		16605845283E0CC30074C6A3 /* NibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibViewController.xib; sourceTree = "<group>"; };
+		16605844283E0CC30074C6A3 /* NibScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibScanViewController.swift; sourceTree = "<group>"; };
+		16605845283E0CC30074C6A3 /* NibScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibScanViewController.xib; sourceTree = "<group>"; };
 		1660584A283F1D400074C6A3 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		1660584F283F4FF40074C6A3 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		16605853283F5E0C0074C6A3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		16605855283F5E230074C6A3 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		16605857284063990074C6A3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		16605859284063B00074C6A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1660585D28407A520074C6A3 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		1660585F28407A770074C6A3 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		16605861284096190074C6A3 /* NibResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibResultViewController.swift; sourceTree = "<group>"; };
+		16605862284096190074C6A3 /* NibResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +170,10 @@
 		16605843283E0CA30074C6A3 /* NibStyle */ = {
 			isa = PBXGroup;
 			children = (
-				16605844283E0CC30074C6A3 /* NibViewController.swift */,
-				16605845283E0CC30074C6A3 /* NibViewController.xib */,
+				16605844283E0CC30074C6A3 /* NibScanViewController.swift */,
+				16605845283E0CC30074C6A3 /* NibScanViewController.xib */,
+				16605861284096190074C6A3 /* NibResultViewController.swift */,
+				16605862284096190074C6A3 /* NibResultViewController.xib */,
 			);
 			path = NibStyle;
 			sourceTree = "<group>";
@@ -174,6 +184,7 @@
 				16605812283E07380074C6A3 /* ScanViewController.swift */,
 				16605855283F5E230074C6A3 /* ResultViewController.swift */,
 				16605859284063B00074C6A3 /* DetailViewController.swift */,
+				1660585F28407A770074C6A3 /* ServiceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 				16605840283E0C8A0074C6A3 /* ScanView.swift */,
 				16605853283F5E0C0074C6A3 /* ResultView.swift */,
 				16605857284063990074C6A3 /* DetailView.swift */,
+				1660585D28407A520074C6A3 /* ServiceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,8 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1660581B283E073C0074C6A3 /* LaunchScreen.storyboard in Resources */,
-				16605847283E0CC30074C6A3 /* NibViewController.xib in Resources */,
+				16605847283E0CC30074C6A3 /* NibScanViewController.xib in Resources */,
 				16605818283E073C0074C6A3 /* Assets.xcassets in Resources */,
+				16605864284096190074C6A3 /* NibResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16605846283E0CC30074C6A3 /* NibViewController.swift in Sources */,
+				1660585E28407A520074C6A3 /* ServiceView.swift in Sources */,
+				16605846283E0CC30074C6A3 /* NibScanViewController.swift in Sources */,
 				16605813283E07380074C6A3 /* ScanViewController.swift in Sources */,
 				16605854283F5E0C0074C6A3 /* ResultView.swift in Sources */,
+				1660586028407A770074C6A3 /* ServiceViewController.swift in Sources */,
+				16605863284096190074C6A3 /* NibResultViewController.swift in Sources */,
 				1660585A284063B00074C6A3 /* DetailViewController.swift in Sources */,
 				1660584B283F1D410074C6A3 /* BLEManager.swift in Sources */,
 				1660580F283E07380074C6A3 /* AppDelegate.swift in Sources */,

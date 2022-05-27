@@ -18,6 +18,12 @@ class BLEManager:NSObject{
     
     static let shared = BLEManager()
     
+    //MARK: - ServiceUUID
+
+    let specificServiceUUID:String = ""
+    
+    let specificCharacteristicUUID:String = ""
+    
     //MARK: - Properties
     
     private var bleCentralManager:CBCentralManager!
@@ -26,7 +32,6 @@ class BLEManager:NSObject{
         didSet{
             valueChanged?()
             peripherals.removeDuplicates()
-//            print("Changed")
         }
     }
      
@@ -40,7 +45,11 @@ class BLEManager:NSObject{
         }
     }
     
-    var discoveredCharacters:[CBCharacteristic] = []
+    var discoveredCharacteristics:[CBCharacteristic] = []{
+        didSet{
+            discoveredCharacteristics.removeDuplicates()
+        }
+    }
 
     //MARK: - Intializer
     override init() {
@@ -66,6 +75,10 @@ class BLEManager:NSObject{
     func removeAll(){
         peripherals.removeAll()
         RSSIs.removeAll()
+    }
+    
+    func saveData(){
+        //UserDefault Save
     }
     
     func connect(peripheral:CBPeripheral){
@@ -133,31 +146,37 @@ extension BLEManager:CBPeripheralDelegate{
         }
         
         guard let services = peripheral.services else { return }
-        services.map{ service in
-            discoveredServices.append(service)
-            peripheral.discoverCharacteristics(nil, for: service)
-            print("發現的服務：",discoveredServices)
+        discoveredServices = services
+        discoveredServices.map{ service in
+                peripheral.discoverCharacteristics(nil, for: service)
+                print("""
+                \n
+                Service
+                UUID:\(service.uuid)
+                isPrimary:\(service.isPrimary)
+                \n
+                """)
+            }
         }
-    }
     
-    //MARK: -Found Discriptor
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverDescriptorsFor characteristic: CBCharacteristic, error: Error?) {
-        if error != nil{
-            print("\(error.debugDescription)")
-            return
+    
+    //MARK: -Found Characteristics
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+        if ((error != nil)){
+            print("Error:\(error?.localizedDescription)")
         }
-        
-        if (characteristic.descriptors != nil){
-            print(
-            """
+        guard let characteristics = service.characteristics else { return }
+        discoveredCharacteristics = characteristics
+        for characteristic in discoveredCharacteristics {
+            print("""
+            \n
+            Characteristic
             UUID:\(characteristic.uuid)
-            Descriptors:\(characteristic.descriptors)
-            Service:\(characteristic.service)
-            Value:"\(characteristic.value)
-            """
-            )
-            discoveredCharacters.append(characteristic)
-            print("發現的特徵：",discoveredCharacters)
+            Notifying:\(characteristic.isNotifying)
+            Properties:\(characteristic.properties)
+            \n
+            """)
         }
     }
     

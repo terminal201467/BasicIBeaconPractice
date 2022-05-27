@@ -14,6 +14,8 @@ class NibViewController: UIViewController {
     
     @IBOutlet var activityIndicator:UIActivityIndicatorView!
     
+    @IBOutlet var storeButton:UIButton!
+    
     //MARK: -ControllerProperties
     
     private var scanSituation:Bool = false

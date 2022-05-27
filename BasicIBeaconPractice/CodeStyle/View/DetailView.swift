@@ -35,8 +35,16 @@ class DetailView: UIView {
         return label
     }()
     
+    let foundedService:UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.numberOfLines = 3
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
     private lazy var peripheralInfo:UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [name,UUID,descriptor])
+        let stackView = UIStackView(arrangedSubviews: [name,UUID,descriptor,foundedService])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
@@ -79,10 +87,14 @@ class DetailView: UIView {
         }
     }
     
-    func configure( _ peripheral:CBPeripheral){
+    func configurePeripheral( _ peripheral:CBPeripheral){
         name.text = "裝置名稱：" + peripheral.name!
         UUID.text = "UUID：" + peripheral.identifier.uuidString
         descriptor.text = "描述：" + "\(peripheral.description)"
     }
-
+    
+    func configureService(_ services:[CBService]){
+        foundedService.text = "發現的服務：\(services.map{$0})"
+    }
+        
 }

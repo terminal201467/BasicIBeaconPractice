@@ -41,7 +41,7 @@ class ResultViewController: UIViewController {
         resultView.table.dataSource = self
     }
     
-    func setBLE(){
+    private func setBLE(){
         BLEManager.shared.valueChanged = {
             DispatchQueue.main.async {
                 self.resultView.table.reloadData()

@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="sEz-4C-Mqd" id="w3T-FZ-zYH"/>
                 <outlet property="scanButton" destination="YxJ-p2-718" id="Vcs-EB-XZv"/>
+                <outlet property="storeButton" destination="DdO-vd-W0I" id="p2n-aI-G1D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -49,15 +50,34 @@
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-4C-Mqd">
                     <rect key="frame" x="197" y="488" width="20" height="20"/>
                 </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdO-vd-W0I">
+                    <rect key="frame" x="142.5" y="528" width="129.5" height="31"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="已儲存的Beacon">
+                        <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" name="AccentColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="sEz-4C-Mqd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0DV-1o-UOD"/>
                 <constraint firstItem="YxJ-p2-718" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AgY-7h-0eU"/>
+                <constraint firstItem="DdO-vd-W0I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SA8-eh-N9n"/>
                 <constraint firstItem="YxJ-p2-718" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yaf-sZ-2Tj"/>
                 <constraint firstItem="YxJ-p2-718" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aTh-dW-cGm"/>
                 <constraint firstItem="sEz-4C-Mqd" firstAttribute="centerY" secondItem="YxJ-p2-718" secondAttribute="centerY" constant="50" id="bEf-5W-boj"/>
+                <constraint firstItem="DdO-vd-W0I" firstAttribute="top" secondItem="sEz-4C-Mqd" secondAttribute="top" constant="40" id="oZ1-FZ-Aig"/>
             </constraints>
             <point key="canvasLocation" x="139" y="121"/>
         </view>
@@ -71,6 +91,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
